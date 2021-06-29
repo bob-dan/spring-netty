@@ -14,7 +14,7 @@ public class LoginReqHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        Head head = Head.builder().priority((byte)1).sessionId(23l).crcCode(1).type(MsgTypeEnum.HANDSHAKE_REQUEST.getType().byteValue()).build();
+        Head head = Head.builder().priority((byte)1).sessionId(23L).crcCode(1).type(MsgTypeEnum.HANDSHAKE_REQUEST.getType().byteValue()).build();
         Map<String,Object> attachment = new HashMap<>();
         attachment.put("dev","2534");
         attachment.put("name","张三");
